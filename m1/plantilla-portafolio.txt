@@ -1,0 +1,25 @@
+[HEADER]
+Nombre Apellido | Full Stack JavaScript Trainee
+Menú: Inicio | Sobre mí | Proyectos | Contacto
+
+[SECCIÓN HERO]
+Hola, soy __________
+Estoy formándome como desarrollador/a Full Stack JavaScript.
+Botón: Ver proyectos
+Botón: Contactar
+
+[SOBRE MÍ]
+Breve descripción personal.
+Mi historia de reconversión.
+Qué me motiva a entrar al mundo TI.
+
+[HABILIDADES]
+HTML | CSS | JavaScript | Git | GitHub | Node.js | Express | PostgreSQL
+
+[PROYECTOS]
+Proyecto 1: Próximamente
+Proyecto 2: Próximamente
+Proyecto 3: Próximamente
+
+[CONTACTO]
+Correo | GitHub | LinkedIn
