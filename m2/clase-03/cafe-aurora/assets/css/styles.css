@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+    background-color: #4a2c2a;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    display: block;
+}
+
+.brand {
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+nav h1 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 30px;
+}
+
+.card {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+#inicio {
+    background-color: #f7efe5;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+
+
+#inicio h2 {
+    color: #4a2c2a;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+
+
+#inicio p {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+#inicio a {
+    display: inline-block;
+    background-color: #4a2c2a;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* 
+  SECCIÓN PRODUCTOS:
+  Esta sección agrupa los productos principales de Café Aurora.
+  Le damos un fondo claro y espacio interno para separarla visualmente
+  de las demás secciones.
+*/
+#productos {
+    background-color: #fffaf3;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+/* 
+  TÍTULO DE PRODUCTOS:
+  Personalizamos el h2 solo dentro de la sección productos.
+*/
+#productos h2 {
+    color: #4a2c2a;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* 
+  TARJETAS DE PRODUCTOS:
+  Cada article con clase card representa un producto.
+  Aquí le damos apariencia de tarjeta visual.
+*/
+.card {
+    background-color: white;
+    padding: 25px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: inline-block;
+    width: 280px;
+    vertical-align: top;
+    text-align: left;
+}
+
+/* 
+  TÍTULO DE CADA TARJETA:
+  Destacamos el nombre de cada producto.
+*/
+.card h3 {
+    color: #4a2c2a;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* 
+  TEXTO DE CADA TARJETA:
+  Mejoramos la lectura del párrafo dentro de la tarjeta.
+*/
+.card p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 
+  SECCIÓN CONTACTO:
+  Esta sección muestra información práctica para que el usuario
+  pueda ubicar o contactar a Café Aurora.
+*/
+#contacto {
+    background-color: #f7efe5;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+/* 
+  TÍTULO DE CONTACTO:
+  Destacamos el título de la sección manteniendo la identidad visual
+  del proyecto.
+*/
+#contacto h2 {
+    color: #4a2c2a;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* 
+  PÁRRAFOS DE CONTACTO:
+  Cada párrafo contiene un dato importante: dirección, correo u horario.
+  Mejoramos su tamaño, separación y lectura.
+*/
+#contacto p {
+    color: #333;
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+
+/* 
+  MEDIA QUERY 1: TABLETS Y PANTALLAS MEDIANAS
+  Se activa cuando el ancho de la pantalla es igual o menor a 768px.
+  Propósito:
+  - Hacer que la navegación se ordene mejor.
+  - Reducir tamaños y espacios.
+  - Permitir que las tarjetas ocupen más ancho.
+*/
+@media (max-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    .brand {
+        margin-bottom: 20px;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #inicio {
+        padding: 45px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 28px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    #productos {
+        padding: 45px 20px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 15px auto;
+        display: block;
+    }
+
+    #contacto {
+        padding: 45px 20px;
+    }
+
+    #contacto p {
+        font-size: 16px;
+    }
+}
+
+
+/* 
+  MEDIA QUERY 2: CELULARES
+  Se activa cuando el ancho de la pantalla es igual o menor a 480px.
+  Propósito:
+  - Optimizar la lectura en pantallas pequeñas.
+  - Evitar que los textos y botones se vean demasiado grandes.
+  - Hacer que los elementos ocupen el ancho disponible.
+*/
+@media (max-width: 480px) {
+    
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        width: 50px;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    nav h1 {
+        display: block;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    nav li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #inicio {
+        padding: 35px 15px;
+    }
+
+    #inicio h2 {
+        font-size: 24px;
+    }
+
+    #inicio p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    #inicio a {
+        width: 100%;
+        max-width: 260px;
+        padding: 12px;
+        text-align: center;
+    }
+
+    #productos {
+        padding: 35px 15px;
+    }
+
+    #productos h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    #contacto {
+        padding: 35px 15px;
+    }
+
+    #contacto h2 {
+        font-size: 24px;
+    }
+
+    #contacto p {
+        font-size: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+}
