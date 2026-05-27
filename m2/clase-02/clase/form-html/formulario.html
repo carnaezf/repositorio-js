@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Permite que la página se adapte mejor a celulares y tablets -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Formulario simple</title>
+</head>
+<body>
+
+  <header>
+    <h1>Formulario de contacto</h1>
+    <p>Completa tus datos para contactarnos.</p>
+  </header>
+
+  <main>
+    <!-- 
+      form representa un formulario.
+      action indica hacia dónde se enviarán los datos.
+      method indica cómo se enviarán los datos.
+      Por ahora usamos "#" porque aún no tenemos backend.
+    -->
+    <form action="#" method="post">
+
+      <!-- Campo para ingresar nombre -->
+      <label for="nombre">Nombre:</label>
+      <input 
+        type="text" 
+        id="nombre" 
+        name="nombre" 
+        placeholder="Escribe tu nombre"
+        required
+      >
+
+      <br><br>
+
+      <!-- Campo para ingresar correo -->
+      <label for="correo">Correo electrónico:</label>
+      <input 
+        type="email" 
+        id="correo" 
+        name="correo" 
+        placeholder="ejemplo@correo.com"
+        required
+      >
+
+      <br><br>
+
+      <!-- Campo para seleccionar una opción -->
+      <label for="motivo">Motivo de contacto:</label>
+      <select id="motivo" name="motivo">
+        <option value="">Selecciona una opción</option>
+        <option value="consulta">Consulta</option>
+        <option value="soporte">Soporte</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <br><br>
+
+      <!-- Campo para escribir un mensaje más largo -->
+      <label for="mensaje">Mensaje:</label>
+      <br>
+      <textarea 
+        id="mensaje" 
+        name="mensaje" 
+        rows="5" 
+        placeholder="Escribe tu mensaje aquí"
+      ></textarea>
+
+      <br><br>
+
+      <!-- Botón para enviar el formulario -->
+      <button type="submit">Enviar</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>Creado en clase - Bootcamp Full Stack JavaScript</p>
+  </footer>
+
+</body>
+</html>

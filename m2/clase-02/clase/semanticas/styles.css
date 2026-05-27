@@ -1,0 +1,205 @@
+/* 
+  Estilos generales de la página.
+  El selector body afecta a todo el cuerpo visible del documento HTML.
+*/
+body {
+  /* Eliminamos el margen por defecto que trae el navegador */
+  margin: 0;
+
+  /* Definimos la familia tipográfica principal del sitio */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Color de fondo general de la página */
+  background-color: #f4f4f4;
+}
+
+/* 
+  Estilo para el título principal de la página.
+  En este caso representa el encabezado visual superior.
+*/
+h1 {
+  /* Color de fondo del bloque del título */
+  background-color: #2d2b80;
+
+  /* Color del texto */
+  color: white;
+
+  /* Centra el texto horizontalmente */
+  text-align: center;
+
+  /* Espacio interno entre el texto y los bordes del bloque */
+  padding: 30px;
+
+  /* Quitamos el margen por defecto del h1 */
+  margin: 0;
+}
+
+/* 
+  Contenedor general de la maqueta.
+  Sirve para limitar el ancho del contenido y centrarlo en la pantalla.
+*/
+.contenedor {
+  /* El contenedor ocupará el 85% del ancho disponible */
+  width: 85%;
+
+  /* Evita que el contenedor crezca demasiado en pantallas grandes */
+  max-width: 1100px;
+
+  /* 
+    30px: margen superior e inferior.
+    auto: centra el contenedor horizontalmente.
+  */
+  margin: 30px auto;
+}
+
+/* 
+  Etiqueta semántica header.
+  Normalmente representa la cabecera de una página o sección.
+*/
+header {
+  background-color: #b43c4a;
+  color: white;
+  text-align: center;
+  padding: 18px;
+
+  /* Separación inferior respecto al nav */
+  margin-bottom: 15px;
+
+  /* Texto en negrita */
+  font-weight: bold;
+
+  /* Tamaño del texto */
+  font-size: 20px;
+}
+
+/* 
+  Etiqueta semántica nav.
+  Representa una zona de navegación, por ejemplo un menú.
+*/
+nav {
+  background-color: #f28c3c;
+  color: white;
+  text-align: center;
+  padding: 18px;
+
+  /* Separación inferior antes del contenido principal */
+  margin-bottom: 25px;
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* 
+  Contenedor que agrupa aside y section.
+  Usamos Flexbox para poner ambos bloques uno al lado del otro.
+*/
+.contenido-principal {
+  /* Activa el modelo de caja flexible */
+  display: flex;
+
+  /* Espacio entre aside y section */
+  gap: 15px;
+
+  /* Separación inferior antes del footer */
+  margin-bottom: 25px;
+}
+
+/* 
+  Etiqueta semántica aside.
+  Representa contenido complementario o lateral.
+*/
+aside {
+  background-color: #55b3c2;
+  color: white;
+
+  /* Ocupa el 38% del ancho del contenedor flexible */
+  width: 38%;
+
+  /* Altura mínima para que el bloque tenga presencia visual */
+  min-height: 220px;
+
+  /* 
+    Usamos Flexbox para centrar el texto
+    vertical y horizontalmente dentro del aside.
+  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* 
+  Etiqueta semántica section.
+  Representa una sección principal de contenido.
+*/
+section {
+  background-color: #a3c957;
+  color: white;
+
+  /* Ocupa el 62% del ancho del contenedor flexible */
+  width: 62%;
+
+  min-height: 220px;
+  text-align: center;
+  padding: 20px;
+
+  /* 
+    Hace que el padding no aumente el ancho total del elemento.
+    Muy útil para evitar desbordes.
+  */
+  box-sizing: border-box;
+
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* 
+  Estilo específico para los párrafos dentro de section.
+  No afecta a todos los párrafos del sitio, solo a los que estén dentro de section.
+*/
+section p {
+  /* Quitamos margen superior para acercarlo al inicio de la sección */
+  margin-top: 0;
+
+  /* Separación inferior antes de los article */
+  margin-bottom: 15px;
+}
+
+/* 
+  Etiqueta semántica article.
+  Representa contenido independiente dentro de una sección.
+  Por ejemplo: una noticia, tarjeta, publicación o proyecto.
+*/
+article {
+  background-color: #7fa23d;
+  color: white;
+
+  /* Espacio interno del artículo */
+  padding: 14px;
+
+  /* 
+    15px arriba y abajo.
+    auto a los lados para centrar el article dentro de section.
+  */
+  margin: 15px auto;
+
+  /* El article ocupa el 80% del ancho de su contenedor section */
+  width: 80%;
+
+  font-weight: bold;
+}
+
+/* 
+  Etiqueta semántica footer.
+  Representa el pie de página del sitio o de una sección.
+*/
+footer {
+  background-color: #4f82bd;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-weight: bold;
+  font-size: 20px;
+}
