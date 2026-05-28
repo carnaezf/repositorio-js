@@ -1,0 +1,90 @@
+/* 
+  Estilos generales:
+  Partimos desde mobile first.
+  Es decir, primero diseñamos para celulares.
+*/
+body {
+  background-color: #f4f7fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+  Título principal.
+  En mobile queda más compacto.
+*/
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 
+  Tarjeta de producto:
+  En mobile se muestra como una fila horizontal:
+  imagen a la izquierda, texto a la derecha.
+*/
+.producto-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background-color: white;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+
+  padding: 14px;
+}
+
+/* 
+  Imagen simulada:
+  Por ahora usamos un bloque gris.
+  Luego el alumno puede reemplazarlo por una etiqueta img real.
+*/
+.producto-img {
+  width: 56px;
+  height: 56px;
+  background-color: #cbd5df;
+  flex-shrink: 0;
+}
+
+/* 
+  Título del producto.
+*/
+.producto-card h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* 
+  Precio del producto.
+*/
+.producto-card p {
+  margin: 4px 0 0;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 
+  MEDIA QUERY:
+  Desde 992px hacia arriba aplicamos ajustes para escritorio.
+  Este tamaño coincide con el breakpoint lg de Bootstrap.
+*/
+@media (min-width: 992px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  /*
+    En escritorio mantenemos la card, pero damos más espacio interno.
+    TODO:
+    El alumno puede experimentar cambiando padding, gap o tamaño de imagen.
+  */
+  .producto-card {
+    padding: 18px;
+  }
+
+  .producto-img {
+    width: 64px;
+    height: 64px;
+  }
+}

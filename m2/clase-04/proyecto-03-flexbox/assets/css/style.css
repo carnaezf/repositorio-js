@@ -1,0 +1,48 @@
+/* VARIABLES GENERALES */
+:root {
+    /* Colores básicos */
+    --color-primario: #005bbb;
+    --color-secundario: #00aaff;
+    --color-texto: #333;
+    --color-fondo: #ffffff;
+    --color-gris-suave: #f4f4f4;
+
+    /* Tipografías */
+    --fuente-principal: Arial, Helvetica, sans-serif;
+
+    /* Espaciados */
+    --padding-base: 16px;
+    --padding-grande: 32px;
+    --ancho-maximo: 1200px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.caja {
+    border: 1px solid rgb(68, 57, 57);
+    background-color: antiquewhite;
+    color: black;
+    font-weight: bold;
+    min-height: 120px;
+    line-height: 120px;
+    margin: 5px;
+    text-align: center;
+    width: 120px;
+}
+
+
+.flex-container {
+    display: flex;
+    border: 1px solid black;
+    background-color: red;
+    padding: 20px;
+    margin:0;
+    flex-flow: row wrap;
+
+
+}
