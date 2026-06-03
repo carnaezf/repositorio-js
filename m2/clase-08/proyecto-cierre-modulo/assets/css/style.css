@@ -1,0 +1,96 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* SCROLL SUAVE */
+/* html {
+    scroll-behavior: smooth;
+} */
+
+/* ESTILOS GENERALES */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    background-color: #004799;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: #005bbb;
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 16px;
+}
+
+/* TARJETA */
+.tarjeta {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h2 {
+    color: #005bbb;
+    margin-bottom: 16px;
+}
+
+.tarjeta p {
+    margin-bottom: 16px;
+}
+
+/* BOTÓN */
+button {
+    background-color: #005bbb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004799;
+}
+
+
+/* PIE DE PÁGINA */
+.pie {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+}
