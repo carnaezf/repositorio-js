@@ -1,0 +1,87 @@
+/* VARIABLES GENERALES */
+:root {
+    /* Colores básicos */
+    --color-primario: #005bbb;
+    --color-secundario: #00aaff;
+    --color-texto: #333;
+    --color-fondo: #ffffff;
+    --color-gris-suave: #f4f4f4;
+
+    /* Tipografías */
+    --fuente-principal: Arial, Helvetica, sans-serif;
+
+    /* Espaciados */
+    --padding-base: 16px;
+    --padding-grande: 32px;
+    --ancho-maximo: 1200px;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-gris-suave);
+    color: var(--color-texto);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: var(--padding-grande);
+}
+
+/* TARJETA BASE */
+.tarjeta {
+    background-color: var(--color-fondo);
+    padding: var(--padding-grande);
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+/* TÍTULOS */
+h1 {
+    color: var(--color-primario);
+    margin-bottom: var(--padding-base);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: var(--padding-base);
+    margin-bottom: var(--padding-base);
+}
+
+/* BLOQUES INTERNOS */
+.instrucciones,
+.resultado {
+    background-color: var(--color-gris-suave);
+    padding: var(--padding-base);
+    border-radius: 8px;
+    margin-top: var(--padding-base);
+}
+
+/* LISTA */
+ul {
+    padding-left: 24px;
+}
+
+/* RESPONSIVIDAD BÁSICA */
+@media (max-width: 576px) {
+    .contenedor {
+        padding: var(--padding-base);
+    }
+
+    .tarjeta {
+        padding: var(--padding-base);
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
