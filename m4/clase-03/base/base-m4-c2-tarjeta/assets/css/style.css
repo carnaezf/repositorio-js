@@ -1,0 +1,27 @@
+/* VARIABLES GENERALES */
+:root {
+    --color-primario: #005bbb;
+    --color-secundario: #00aaff;
+    --color-texto: #333;
+    --color-fondo: #ffffff;
+    --color-gris-suave: #f4f4f4;
+
+    --fuente-principal: Arial, Helvetica, sans-serif;
+
+    --padding-base: 16px;
+    --padding-grande: 32px;
+    --ancho-maximo: 1200px;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-gris-suave);
+}
