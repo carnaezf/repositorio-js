@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de API con Fetch</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HTML 1 - Contenedor principal -->
+    <!-- Esta sección existe en el DOM y JavaScript podrá seleccionarla -->
+    <main class="container my-5">
+
+        <h1 class="mb-3">Usuarios desde una API</h1>
+
+        <p class="text-muted">
+            En este ejemplo consumiremos datos desde una API externa usando fetch.
+        </p>
+
+        <!-- HTML 2 - Botón para disparar la petición -->
+        <button id="btn-cargar" class="btn btn-primary mb-4">
+            Cargar usuarios
+        </button>
+
+        <!-- HTML 3 - Lista donde JavaScript insertará datos -->
+        <ul id="authors" class="list-group">
+            <!-- JS agregará elementos li aquí -->
+        </ul>
+
+    </main>
+
+    <!-- JS propio -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
