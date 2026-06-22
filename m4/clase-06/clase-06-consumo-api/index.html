@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Módulo 4 - API y Clases</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ====================================================== -->
+    <!-- HTML 1 - CONTENEDOR PRINCIPAL -->
+    <!-- ====================================================== -->
+
+    <main class="container my-5">
+
+        <section class="mb-4">
+            <h1 class="mb-3">Gestor de personajes</h1>
+
+            <p class="text-muted">
+                Ejercicio práctico para consumir una API usando fetch, clases, métodos y eventos.
+            </p>
+        </section>
+
+
+
+        <!-- ====================================================== -->
+        <!-- HTML 2 - BOTONES PARA LLAMAR MÉTODOS -->
+        <!-- ====================================================== -->
+        <!-- Cada botón ejecutará un método de la clase desde JavaScript. -->
+
+        <section class="d-flex flex-wrap gap-2 mb-4">
+
+            <button id="btn-listar-nombres" class="btn btn-primary">
+                Listar nombres
+            </button>
+
+            <button id="btn-info-basica" class="btn btn-success">
+                Buscar información básica
+            </button>
+
+            <button id="btn-origen" class="btn btn-warning">
+                Buscar origen
+            </button>
+
+            <button id="btn-info-avanzada" class="btn btn-info">
+                Buscar información avanzada
+            </button>
+
+            <button id="btn-listar-especies" class="btn btn-secondary">
+                Listar personajes y especies
+            </button>
+
+            <button id="btn-ordenar-nombres" class="btn btn-dark">
+                Ordenar nombres
+            </button>
+
+        </section>
+
+
+
+        <!-- ====================================================== -->
+        <!-- HTML 3 - MENSAJE DE APOYO -->
+        <!-- ====================================================== -->
+
+        <section class="alert alert-light border">
+            <p class="mb-0">
+                Abra la consola del navegador para ver los resultados.
+            </p>
+        </section>
+
+    </main>
+
+
+
+    <!-- ====================================================== -->
+    <!-- HTML 4 - ARCHIVO JAVASCRIPT -->
+    <!-- ====================================================== -->
+
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
