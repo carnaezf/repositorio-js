@@ -1,0 +1,28 @@
+/* VARIABLES GENERALES */
+:root {
+    --color-primario: #005bbb;
+    --color-secundario: #00aaff;
+    --color-texto: #333;
+    --color-fondo: #f4f4f4;
+
+    --fuente-principal: Arial, Helvetica, sans-serif;
+
+    --padding-base: 16px;
+    --padding-grande: 32px;
+    --ancho-maximo: 1200px;
+}
+
+/* ESTILOS GENERALES */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+h1 {
+    color: var(--color-primario);
+}
+
+#resultado {
+    line-height: 1.7;
+}
