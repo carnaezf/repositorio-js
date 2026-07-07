@@ -1,0 +1,26 @@
+
+@baseUrl = http://localhost:3000
+
+
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/api/notes
+
+
+###
+GET {{baseUrl}}/api/notes/100
+
+
+###
+DELETE {{baseUrl}}/api/notes/1
+
+
+###
+POST {{baseUrl}}/api/notes
+Content-Type: application/json
+
+{
+    "content": "Prueba de una longitud mayor",
+    "important": false
+}
