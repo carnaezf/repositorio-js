@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:3000
+
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/tareas
+
+
+###request.body
+POST {{baseUrl}}/tareas/ 
+Content-Type: application/json
+
+{
+    "titulo": "Practicar Express"
+}
+
+### Error al crear la tarea
+POST {{baseUrl}}/tareas 
+Content-Type: application/json
+
+{
+}
+
+### 
+PUT {{baseUrl}}/tareas/1
+
+
+### 
+PUT {{baseUrl}}/tareas/999
+
+
+### Eliminar tarea
+GET {{baseUrl}}/eliminar-tarea/1
+
+
+### Eliminar tarea (Buena practica)
+DELETE {{baseUrl}}/tareas/2

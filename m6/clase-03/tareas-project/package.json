@@ -1,0 +1,18 @@
+{
+  "name": "tareas-project",
+  "version": "1.0.0",
+  "description": "Proyecto tareas, persistencia y middlewares",
+  "license": "ISC",
+  "author": "CAF",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "moment": "^2.30.1"
+  }
+}
