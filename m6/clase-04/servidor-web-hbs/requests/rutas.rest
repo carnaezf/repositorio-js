@@ -1,3 +1,16 @@
-@baseUrl = http://localhost:3001
+@baseUrl = http://localhost:3000
 
-GET {{baseUrl}}
+### Ruta principal
+GET {{baseUrl}}/
+
+### Ruta productos renderizada con Handlebars
+GET {{baseUrl}}/productos
+
+### Ruta con parámetro
+GET {{baseUrl}}/usuario/Camila
+
+### API JSON de productos
+GET {{baseUrl}}/api/productos
+
+### Ruta inexistente
+GET {{baseUrl}}/ruta-que-no-existe
