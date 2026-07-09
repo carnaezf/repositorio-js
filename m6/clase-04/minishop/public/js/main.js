@@ -1,0 +1,1 @@
+console.log("MiniShop frontend cargado correctamente.");

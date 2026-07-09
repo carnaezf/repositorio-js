@@ -1,0 +1,21 @@
+:root {
+    --color-principal: #212529;
+    --color-fondo: #f4f4f4;
+    --color-texto: #333;
+    --fuente-principal: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+h1 {
+    color: var(--color-principal);
+}
+
+.producto-img {
+    height: 220px;
+    object-fit: cover;
+}

@@ -1,0 +1,29 @@
+### Página principal
+GET http://localhost:3000/
+
+
+### Página nosotros
+GET http://localhost:3000/about
+
+
+### Página contacto
+GET http://localhost:3000/contact
+
+
+### Enviar formulario de contacto
+POST http://localhost:3000/contact
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Cesar&email=cesar@test.com&mensaje=Hola MiniShop
+
+
+### Método no permitido en home
+PUT http://localhost:3000/
+
+
+### Método no permitido en about
+POST http://localhost:3000/about
+
+
+### Método no permitido en contact
+PUT http://localhost:3000/contact

@@ -1,4 +1,6 @@
-servidor-web-hbs/
+
+
+minishop/
 ├── index.js
 ├── package.json
 ├── public/
@@ -15,7 +17,8 @@ servidor-web-hbs/
 │   │   ├── header.handlebars
 │   │   └── footer.handlebars
 │   ├── home.handlebars
-│   ├── usuario.handlebars
-│   └── productos.handlebars
+│   ├── about.handlebars
+│   ├── contact.handlebars
+│   └── success.handlebars
 └── request/
     └── rutas.rest
