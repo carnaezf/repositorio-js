@@ -1,0 +1,32 @@
+[
+  {
+    "id": 2,
+    "titulo": "Instalar Express",
+    "estado": "completada"
+  },
+  {
+    "id": 3,
+    "titulo": "Crear servidor",
+    "estado": "completada"
+  },
+  {
+    "id": 4,
+    "titulo": "Entender middleware",
+    "estado": "pendiente"
+  },
+  {
+    "id": 5,
+    "titulo": "Probar con Postman",
+    "estado": "pendiente"
+  },
+  {
+    "id": 6,
+    "titulo": "Leer sobre asincronía",
+    "estado": "pendiente"
+  },
+  {
+    "id": 7,
+    "titulo": "Practicar Express",
+    "estado": "pendiente"
+  }
+]

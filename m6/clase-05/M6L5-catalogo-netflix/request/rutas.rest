@@ -1,0 +1,40 @@
+### Obtener películas
+GET http://localhost:3000/catalogo?tipo=peliculas
+
+
+### Obtener series
+GET http://localhost:3000/catalogo?tipo=series
+
+
+### Agregar película
+POST http://localhost:3000/catalogo?tipo=peliculas
+Content-Type: application/json
+
+{
+  "nombre": "Avatar",
+  "director": "James Cameron",
+  "anio": 2009
+}
+
+
+### Agregar serie
+POST http://localhost:3000/catalogo?tipo=series
+Content-Type: application/json
+
+{
+  "nombre": "Dark",
+  "anio": 2017,
+  "temporadas": 3
+}
+
+
+### Eliminar película por nombre
+DELETE http://localhost:3000/catalogo/Avatar?tipo=peliculas
+
+
+### Eliminar serie por nombre
+DELETE http://localhost:3000/catalogo/Dark?tipo=series
+
+
+### Método no permitido
+PUT http://localhost:3000/catalogo?tipo=peliculas
