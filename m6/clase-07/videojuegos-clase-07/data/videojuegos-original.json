@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "titulo": "The Legend of Zelda",
+    "plataforma": "Nintendo Switch",
+    "precio": 59990,
+    "stock": 8,
+    "disponible": true
+  },
+  {
+    "id": 2,
+    "titulo": "God of War Ragnarok",
+    "plataforma": "PS5",
+    "precio": 49990,
+    "stock": 5,
+    "disponible": true
+  },
+  {
+    "id": 3,
+    "titulo": "Minecraft",
+    "plataforma": "PC",
+    "precio": 24990,
+    "stock": 15,
+    "disponible": true
+  },
+  {
+    "id": 4,
+    "titulo": "EA Sports FC 25",
+    "plataforma": "Xbox Series X",
+    "precio": 42990,
+    "stock": 0,
+    "disponible": false
+  }
+]

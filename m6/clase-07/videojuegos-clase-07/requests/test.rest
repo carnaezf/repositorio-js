@@ -1,0 +1,47 @@
+@baseUrl = http://localhost:3001
+
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/hhhhh
+
+###
+GET {{baseUrl}}/videojuegos
+
+### caso correcto
+GET {{baseUrl}}/videojuegos/1
+
+
+### caso inexistente
+GET {{baseUrl}}/videojuegos/999
+
+
+### caso invalido
+GET {{baseUrl}}/videojuegos/hola
+
+
+
+### Eliminar por ID
+DELETE {{baseUrl}}/videojuegos/1
+
+
+### caso inexistente
+DELETE {{baseUrl}}/videojuegos/999
+
+
+### caso invalido
+DELETE {{baseUrl}}/videojuegos/hola
+
+
+### POST videojuego
+POST {{baseUrl}}/videojuegos
+Content-Type: application/json
+
+{
+    "titulo": "Ciberpunk 2077",
+    "plataforma": "PC",
+    "precio": 39990,
+    "stock": 10,
+    "disponible": true
+}
+
