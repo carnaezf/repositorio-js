@@ -1,0 +1,50 @@
+[
+  {
+    "id": 2,
+    "titulo": "God of War Ragnarok Deluxe",
+    "plataforma": "PS5 Pro",
+    "precio": 79990,
+    "stock": 0,
+    "disponible": true
+  },
+  {
+    "id": 3,
+    "titulo": "Minecraft",
+    "plataforma": "PC",
+    "precio": 24990,
+    "stock": 15,
+    "disponible": true
+  },
+  {
+    "id": 4,
+    "titulo": "EA Sports FC 25",
+    "plataforma": "Xbox Series X",
+    "precio": 42990,
+    "stock": 0,
+    "disponible": false
+  },
+  {
+    "id": 5,
+    "titulo": "Ciberpunk 2077",
+    "plataforma": "PC",
+    "precio": 39990,
+    "stock": 10,
+    "disponible": true
+  },
+  {
+    "id": 6,
+    "titulo": "Mario Bros",
+    "plataforma": "Nintendo Switch",
+    "precio": 100000,
+    "stock": 1,
+    "disponible": true
+  },
+  {
+    "id": 7,
+    "titulo": "God of War Ragnarok Deluxe II",
+    "plataforma": "PS5 Pro",
+    "precio": 79990,
+    "stock": 7,
+    "disponible": true
+  }
+]

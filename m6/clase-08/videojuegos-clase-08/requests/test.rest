@@ -1,0 +1,78 @@
+@baseUrl = http://localhost:3001
+
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/hhhhh
+
+###
+GET {{baseUrl}}/videojuegos
+
+### caso correcto
+GET {{baseUrl}}/videojuegos/1
+
+
+### caso inexistente
+GET {{baseUrl}}/videojuegos/999
+
+
+### caso invalido
+GET {{baseUrl}}/videojuegos/hola
+
+
+
+### Eliminar por ID
+DELETE {{baseUrl}}/videojuegos/1
+
+
+### caso inexistente
+DELETE {{baseUrl}}/videojuegos/999
+
+
+### caso invalido
+DELETE {{baseUrl}}/videojuegos/hola
+
+
+### POST videojuego
+POST {{baseUrl}}/videojuegos
+Content-Type: application/json
+
+  {
+    "titulo": "God of War Ragnarok Deluxe II",
+    "plataforma": "PS5 Pro",
+    "precio": 79990,
+    "stock": 7,
+    "disponible": true
+  }
+
+### PUT videojuego
+PUT {{baseUrl}}/videojuegos/2
+Content-Type: application/json
+
+  {
+    "titulo": "God of War Ragnarok Deluxe",
+    "plataforma": "PS5 Pro",
+    "precio": 79990,
+    "stock": 7,
+    "disponible": true
+  }
+
+### PUT ID inexistente
+PUT {{baseUrl}}/videojuegos/99
+Content-Type: application/json
+
+  {
+    "titulo": "God of War Ragnarok Deluxe",
+    "plataforma": "PS5 Pro",
+    "precio": 79990,
+    "stock": 7,
+    "disponible": true
+  }
+
+### PUT campos faltantes
+PUT {{baseUrl}}/videojuegos/2
+Content-Type: application/json
+
+  {
+    "titulo": "God of War Ragnarok Deluxe"
+  }
