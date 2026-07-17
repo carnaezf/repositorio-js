@@ -1,0 +1,23 @@
+@baseUrl = http://localhost:3000
+
+###
+GET {{ baseUrl }}
+
+###
+GET {{ baseUrl }}/test
+
+###
+GET {{ baseUrl }}/health
+
+
+### Obtener detalles de PostgreSQL
+GET {{ baseUrl }}/health/details
+
+
+
+### Middleware no encontrado
+GET {{ baseUrl }}/healthd
+
+
+###
+GET {{ baseUrl }}/productos
