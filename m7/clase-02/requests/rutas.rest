@@ -1,0 +1,44 @@
+@baseUrl = http://localhost:3000
+
+###
+GET {{ baseUrl }}
+
+###
+GET {{ baseUrl }}/test
+
+###
+GET {{ baseUrl }}/health
+
+
+### Obtener detalles de PostgreSQL
+GET {{ baseUrl }}/health/details
+
+
+
+### Middleware no encontrado
+GET {{ baseUrl }}/healthd
+
+
+###
+GET {{ baseUrl }}/productos
+
+
+### 1. Consulta insegura con un id normal
+GET {{ baseUrl }}/productos-inseguro/3
+
+
+### 2. Demostración controlada de SQL Injection
+### %20 representa un espacio
+GET {{ baseUrl }}/productos-inseguro/1%20OR%201=1
+
+
+### 3. Consulta segura con un id normal
+GET {{ baseUrl }}/productos-seguro/3
+
+
+### 4. La misma entrada manipulada en la ruta segura
+GET {{ baseUrl }}/productos-seguro/1%20OR%201=1
+
+
+### 5. Producto inexistente
+GET {{ baseUrl }}/productos-seguro/999
