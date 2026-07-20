@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:3000
+
+###
+GET {{ baseUrl }}
+
+###
+GET {{ baseUrl }}/test
+
+###
+GET {{ baseUrl }}/health
+
+
+### Middleware no encontrado
+GET {{ baseUrl }}/healthd
+
+
+### GET todas las mascotas
+GET {{baseUrl}}/mascotas
+
+### GET mascota por nombre
+GET {{baseUrl}}/mascotas/nombre/Firulais
+
+### GET mascotas por RUT
+GET {{baseUrl}}/mascotas/rut/12345678-9
+
+### POST registrar mascota
+POST {{baseUrl}}/mascotas
+Content-Type: application/json
+
+{
+  "nombre": "Copito",
+  "rut": "22222222-2"
+}
+
+### POST error campos faltantes
+POST {{baseUrl}}/mascotas
+Content-Type: application/json
+
+{
+  "nombre": "SinRut"
+}
+
+### DELETE mascota por nombre
+DELETE {{baseUrl}}/mascotas/nombre/Copito
+
+### DELETE mascotas por RUT
+DELETE {{baseUrl}}/mascotas/rut/12345678-9
+
+### Ruta no encontrada
+GET {{baseUrl}}/ruta-inexistente
