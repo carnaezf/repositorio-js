@@ -1,0 +1,39 @@
+@baseUrl = http://localhost:3000
+
+###
+GET {{ baseUrl }}
+
+###
+GET {{ baseUrl }}/test
+
+###
+GET {{ baseUrl }}/health
+
+
+### Middleware no encontrado
+GET {{ baseUrl }}/healthd
+
+
+### Listar productos
+GET {{ baseUrl }}/productos
+
+
+
+### Obtener producto por ID "/productos/:id"
+GET {{ baseUrl }}/productos/1
+
+
+### Obtener producto por ID "/productos/:id" NaN
+GET {{ baseUrl }}/productos/-1
+
+
+
+###  Transaccion exitosa
+POST {{ baseUrl }}/productos/transferir-stock
+Content-Type: application/json
+
+{
+  "productoOrigenId": 1,
+  "productoDestinoId": 2,
+  "cantidad": 3
+}
