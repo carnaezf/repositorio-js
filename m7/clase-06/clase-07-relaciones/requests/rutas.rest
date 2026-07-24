@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:3000
+
+###
+GET {{ baseUrl }}
+
+###
+GET {{ baseUrl }}/test
+
+###
+GET {{ baseUrl }}/health
+
+
+### Middleware no encontrado
+GET {{ baseUrl }}/healthd
+
+
+### Relacion 1 : N
+GET {{ baseUrl }}/directores
+
+### 
+POST {{ baseUrl }}/directores
+Content-Type: application/json
+
+{
+    "nombre": "Denis Villeneuve"
+}
+
