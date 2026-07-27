@@ -1,0 +1,16 @@
+body {
+  min-height: 100vh;
+  background-color: #f5f6f8;
+}
+
+main {
+  max-width: 800px;
+}
+
+.card {
+  border: 0;
+}
+
+.list-group-item {
+  align-items: center;
+}

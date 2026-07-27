@@ -1,0 +1,76 @@
+@baseUrl = http://localhost:3000
+
+# =====================================================
+# FRONTEND
+# =====================================================
+
+### Página principal
+GET {{baseUrl}}
+
+# =====================================================
+# RUTAS EXISTENTES DE LA PLANTILLA
+# =====================================================
+
+### Ruta de prueba
+GET {{baseUrl}}/test
+
+### Estado de la conexión
+GET {{baseUrl}}/health
+
+# =====================================================
+# CLIENTES
+# =====================================================
+
+### Obtener todos los clientes
+GET {{baseUrl}}/clientes
+
+### Crear un cliente
+POST {{baseUrl}}/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Ana Torres",
+  "email": "ana.torres@example.com"
+}
+
+### Crear otro cliente
+POST {{baseUrl}}/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Carlos Soto",
+  "email": "carlos.soto@example.com"
+}
+
+### Probar email repetido
+POST {{baseUrl}}/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Otra Ana",
+  "email": "ana.torres@example.com"
+}
+
+### Probar datos incompletos
+POST {{baseUrl}}/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Cliente sin correo"
+}
+
+### Probar email inválido
+POST {{baseUrl}}/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Cliente de prueba",
+  "email": "correo-invalido"
+}
+
+# =====================================================
+# MIDDLEWARE 404
+# =====================================================
+
+### Ruta inexistente
+GET {{baseUrl}}/healthd
