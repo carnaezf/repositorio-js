@@ -1,0 +1,1 @@
+// placeholder for public JavaScript app logic

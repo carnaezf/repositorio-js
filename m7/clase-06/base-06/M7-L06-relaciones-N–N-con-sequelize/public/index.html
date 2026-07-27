@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Películas y actores</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/css/styles.css"
+    />
+  </head>
+
+  <body>
+    <main class="container py-5">
+      <header class="mb-4">
+        <h1>Películas y actores</h1>
+
+        <p class="text-secondary">
+          Relación muchos a muchos con Express,
+          Sequelize y PostgreSQL.
+        </p>
+      </header>
+
+      <div
+        id="mensaje"
+        class="alert d-none"
+        role="alert"
+      ></div>
+
+      <section class="row g-4 mb-4">
+        <div class="col-12 col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h2 class="h4">
+                Crear actor
+              </h2>
+
+              <form id="form-actor">
+                <div class="mb-3">
+                  <label
+                    for="actor-nombre"
+                    class="form-label"
+                  >
+                    Nombre
+                  </label>
+
+                  <input
+                    id="actor-nombre"
+                    name="nombre"
+                    type="text"
+                    class="form-control"
+                    maxlength="120"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label
+                    for="fecha-nacimiento"
+                    class="form-label"
+                  >
+                    Fecha de nacimiento
+                  </label>
+
+                  <input
+                    id="fecha-nacimiento"
+                    name="fecha_nacimiento"
+                    type="date"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  Crear actor
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h2 class="h4">
+                Crear película
+              </h2>
+
+              <form id="form-pelicula">
+                <div class="mb-3">
+                  <label
+                    for="pelicula-titulo"
+                    class="form-label"
+                  >
+                    Título
+                  </label>
+
+                  <input
+                    id="pelicula-titulo"
+                    name="titulo"
+                    type="text"
+                    class="form-control"
+                    maxlength="150"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label
+                    for="pelicula-anio"
+                    class="form-label"
+                  >
+                    Año
+                  </label>
+
+                  <input
+                    id="pelicula-anio"
+                    name="anio"
+                    type="number"
+                    class="form-control"
+                    min="1888"
+                    max="2100"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label
+                    for="pelicula-actores"
+                    class="form-label"
+                  >
+                    Actores opcionales
+                  </label>
+
+                  <select
+                    id="pelicula-actores"
+                    name="actor_ids"
+                    class="form-select"
+                    multiple
+                    size="4"
+                  ></select>
+
+                  <div class="form-text">
+                    Mantenga presionada la tecla Ctrl
+                    para seleccionar varios actores.
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  Crear película
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h2 class="h4">
+            Asignar actor a película
+          </h2>
+
+          <form
+            id="form-asignacion"
+            class="row g-3"
+          >
+            <div class="col-12 col-md-5">
+              <label
+                for="asignacion-pelicula"
+                class="form-label"
+              >
+                Película
+              </label>
+
+              <select
+                id="asignacion-pelicula"
+                name="pelicula_id"
+                class="form-select"
+                required
+              ></select>
+            </div>
+
+            <div class="col-12 col-md-5">
+              <label
+                for="asignacion-actor"
+                class="form-label"
+              >
+                Actor
+              </label>
+
+              <select
+                id="asignacion-actor"
+                name="actor_id"
+                class="form-select"
+                required
+              ></select>
+            </div>
+
+            <div
+              class="col-12 col-md-2 d-flex align-items-end"
+            >
+              <button
+                type="submit"
+                class="btn btn-success w-100"
+              >
+                Asignar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h2 class="h4 mb-0">
+                  Películas
+                </h2>
+
+                <button
+                  id="btn-peliculas"
+                  type="button"
+                  class="btn btn-outline-primary"
+                >
+                  Actualizar
+                </button>
+              </div>
+
+              <div id="lista-peliculas"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h2 class="h4 mb-0">
+                  Actores
+                </h2>
+
+                <button
+                  id="btn-actores"
+                  type="button"
+                  class="btn btn-outline-primary"
+                >
+                  Actualizar
+                </button>
+              </div>
+
+              <div id="lista-actores"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

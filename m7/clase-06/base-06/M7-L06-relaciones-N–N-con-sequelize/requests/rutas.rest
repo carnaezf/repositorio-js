@@ -1,0 +1,154 @@
+@baseUrl = http://localhost:3000
+
+# =====================================================
+# FRONTEND
+# =====================================================
+
+### Página principal
+GET {{baseUrl}}
+
+# =====================================================
+# RUTAS EXISTENTES
+# =====================================================
+
+### Ruta de prueba
+GET {{baseUrl}}/test
+
+### Estado de la conexión
+GET {{baseUrl}}/health
+
+# =====================================================
+# ACTORES
+# =====================================================
+
+### Listar actores con sus películas
+GET {{baseUrl}}/actores
+
+### Crear actor 1
+POST {{baseUrl}}/actores
+Content-Type: application/json
+
+{
+  "nombre": "Matthew McConaughey",
+  "fecha_nacimiento": "1969-11-04"
+}
+
+### Crear actor 2
+POST {{baseUrl}}/actores
+Content-Type: application/json
+
+{
+  "nombre": "Anne Hathaway",
+  "fecha_nacimiento": "1982-11-12"
+}
+
+### Crear actor 3
+POST {{baseUrl}}/actores
+Content-Type: application/json
+
+{
+  "nombre": "Leonardo DiCaprio",
+  "fecha_nacimiento": "1974-11-11"
+}
+
+### Error: datos incompletos
+POST {{baseUrl}}/actores
+Content-Type: application/json
+
+{
+  "nombre": "Actor sin fecha"
+}
+
+# =====================================================
+# PELÍCULAS
+# =====================================================
+
+### Listar películas con sus actores
+GET {{baseUrl}}/peliculas
+
+### Crear película sin actores
+POST {{baseUrl}}/peliculas
+Content-Type: application/json
+
+{
+  "titulo": "Interstellar",
+  "anio": 2014
+}
+
+### Crear película asignando actores
+POST {{baseUrl}}/peliculas
+Content-Type: application/json
+
+{
+  "titulo": "Inception",
+  "anio": 2010,
+  "actor_ids": [3]
+}
+
+### Error: actor inexistente
+### La transacción debe deshacer la creación
+### de la película.
+POST {{baseUrl}}/peliculas
+Content-Type: application/json
+
+{
+  "titulo": "Película de prueba",
+  "anio": 2026,
+  "actor_ids": [999]
+}
+
+# =====================================================
+# ASIGNACIÓN TRANSACCIONAL
+# =====================================================
+
+### Asignar actor 1 a película 1
+POST {{baseUrl}}/asignar-actor
+Content-Type: application/json
+
+{
+  "pelicula_id": 1,
+  "actor_id": 1
+}
+
+### Asignar actor 2 a película 1
+POST {{baseUrl}}/asignar-actor
+Content-Type: application/json
+
+{
+  "pelicula_id": 1,
+  "actor_id": 2
+}
+
+### Error: relación duplicada
+POST {{baseUrl}}/asignar-actor
+Content-Type: application/json
+
+{
+  "pelicula_id": 1,
+  "actor_id": 2
+}
+
+### Error: película inexistente
+POST {{baseUrl}}/asignar-actor
+Content-Type: application/json
+
+{
+  "pelicula_id": 999,
+  "actor_id": 1
+}
+
+### Error: actor inexistente
+POST {{baseUrl}}/asignar-actor
+Content-Type: application/json
+
+{
+  "pelicula_id": 1,
+  "actor_id": 999
+}
+
+# =====================================================
+# MIDDLEWARE 404
+# =====================================================
+
+### Endpoint inexistente
+GET {{baseUrl}}/healthd
