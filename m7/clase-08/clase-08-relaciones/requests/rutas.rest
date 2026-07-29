@@ -1,0 +1,78 @@
+@baseUrl = http://localhost:3000
+
+###
+GET {{ baseUrl }}
+
+###
+GET {{ baseUrl }}/test
+
+###
+GET {{ baseUrl }}/health
+
+
+### Middleware no encontrado
+GET {{ baseUrl }}/healthd
+
+
+### Relacion 1 : N
+GET {{ baseUrl }}/directores
+
+### 
+POST {{ baseUrl }}/directores
+Content-Type: application/json
+
+{
+    "nombre": "Denis Villeneuve"
+}
+
+
+### 
+POST {{ baseUrl }}/peliculas
+Content-Type: application/json
+
+{
+    "titulo": "Dune",
+    "anio": 2021,
+    "directorId": 3
+}
+
+
+
+### Lista peliculas con director y genero
+GET {{ baseUrl }}/peliculas
+
+
+### Eliminar director, probar borrado en cascada
+
+DELETE {{ baseUrl }}/directores/6
+
+
+
+# Relacion 1 :
+# USUARIO - PERFIL
+
+### Listar usuarios con perfil
+GET {{ baseUrl }}/usuarios
+
+### ID 3
+POST {{ baseUrl }}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Maria Lopez",
+    "email": "maria@mail.cl"
+}
+
+
+### 
+POST {{ baseUrl }}/usuarios/3/perfil
+Content-Type: application/json
+
+{
+    "biografia": "Aficionada al cine latinoamericano",
+    "avatarUrl": "htts://example.cl/maria.jpg"
+}
+
+### Buscar un usuario con su perfil
+GET {{ baseUrl }}/usuarios/3
+
