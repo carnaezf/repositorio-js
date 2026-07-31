@@ -1,0 +1,54 @@
+@baseUrl = http://localhost:3000
+@apiUrl = {{baseUrl}}/api/v1
+
+### =====================================================
+### LISTAR CANCIONES
+### =====================================================
+
+GET {{apiUrl}}/canciones
+
+### =====================================================
+### SUBIR CANCIÓN
+### =====================================================
+
+POST {{apiUrl}}/canciones
+Content-Type: multipart/form-data; boundary=ClaseBoundary
+
+--ClaseBoundary
+Content-Disposition: form-data; name="titulo"
+
+Canción de prueba
+--ClaseBoundary
+Content-Disposition: form-data; name="artista"
+
+Artista de prueba
+--ClaseBoundary
+Content-Disposition: form-data; name="archivo"; filename="prueba.mp3"
+Content-Type: audio/mpeg
+
+< ./archivos/prueba.mp3
+--ClaseBoundary--
+
+### =====================================================
+### ERROR: SIN ARCHIVO
+### =====================================================
+
+POST {{apiUrl}}/canciones
+Content-Type: multipart/form-data; boundary=ClaseBoundary
+
+--ClaseBoundary
+Content-Disposition: form-data; name="titulo"
+
+Canción sin archivo
+--ClaseBoundary
+Content-Disposition: form-data; name="artista"
+
+Artista de prueba
+--ClaseBoundary--
+
+### =====================================================
+### ELIMINAR CANCIÓN
+### =====================================================
+
+DELETE {{apiUrl}}/canciones/1
+
