@@ -1,0 +1,55 @@
+@baseUrl = http://localhost:3001
+
+### API funcionando
+GET {{baseUrl}}/
+
+### Listar todos los clientes
+GET {{baseUrl}}/clientes
+
+### Listar clientes con cuenta RUT
+GET {{baseUrl}}/clientes/cuenta-rut
+
+### Crear cliente nuevo con cuenta RUT
+POST {{baseUrl}}/clientes/nuevo/cuenta-rut
+Content-Type: application/json
+
+{
+  "rut": "33333333-3",
+  "nombre": "María González",
+  "saldo": 70000
+}
+
+### Crear cliente nuevo con cuenta de AHORRO
+POST {{baseUrl}}/clientes/nuevo/cuenta-ahorro
+Content-Type: application/json
+
+{
+  "rut": "44444444-4",
+  "nombre": "Pedro Ramírez",
+  "saldo": 180000
+}
+
+### Agregar cuenta RUT a cliente existente
+POST {{baseUrl}}/clientes/22222222-2/cuenta-rut
+Content-Type: application/json
+
+{
+  "saldo": 45000
+}
+
+### Agregar cuenta de AHORRO a cliente existente
+POST {{baseUrl}}/clientes/11111111-1/cuenta-ahorro
+Content-Type: application/json
+
+{
+  "saldo": 300000
+}
+
+### Eliminar cliente y todas sus cuentas
+DELETE {{baseUrl}}/clientes/33333333-3
+
+### Eliminar cuenta RUT de cliente
+DELETE {{baseUrl}}/clientes/11111111-1/cuenta-rut
+
+### Eliminar cuenta de AHORRO de cliente
+DELETE {{baseUrl}}/clientes/22222222-2/cuenta-ahorro/AHO-1002

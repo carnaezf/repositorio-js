@@ -1,0 +1,31 @@
+[
+  {
+    "rut": "11111111-1",
+    "nombre": "Ana Pérez",
+    "cuentaRut": {
+      "numero": "RUT-11111111-1",
+      "saldo": 50000
+    },
+    "cuentasAhorro": [
+      {
+        "numero": "AHO-1001",
+        "saldo": 120000
+      }
+    ]
+  },
+  {
+    "rut": "22222222-2",
+    "nombre": "Carlos Soto",
+    "cuentaRut": null,
+    "cuentasAhorro": [
+      {
+        "numero": "AHO-1002",
+        "saldo": 250000
+      },
+      {
+        "numero": "AHO-1003",
+        "saldo": 90000
+      }
+    ]
+  }
+]
